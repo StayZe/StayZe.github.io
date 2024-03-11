@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body{
+    background-image: url(/télécharger.jpeg);
+    background-position: center;
+    background-size: cover;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth; /* Ajoute une transition fluide lors du déplacement */
+    transition-duration: 2s;
+}
+
+.arrow{
+    position: fixed;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    filter: invert();
+    height: 30px;
+    width: 30px;
+}
+
+ul, li,a{
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: visible;
+}
+
+h2{
+    margin-left: -10px;
+    font-weight: normal;
+    color: white;
+    margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h2:hover{
+    background-color: red;
+}
+
+li{
+    font-size: 18px;
+    color: white;
+    margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a{
+    color: white;
+    cursor: default;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li:hover{
+    background-color: red;
+}
+
+.social-media li:hover{
+    background-color: #00FFFF;
+}
+
+.social-media{
+    filter: invert();
+}
+
+.social-media li{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+img{
+    width: 20px;
+    height: 20px;
+}
+
+#menu{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width:fit-content;
+    justify-content: center;
+    align-items: flex-start ;
+}
+
+#prestations, #cv ,#contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: visible;
+}
+
+#menu .social-media{
+    display: flex;
+}
+
+#menu .social-media ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.social-media-2{
+    filter: invert();
+    display: flex;
+}
+
+.social-media-2 ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.social-media-2 li:hover{
+    background-color: #00FFFF;
+}
+
+.social-media-2 li{
+    display: inline-block;
+    margin-right: 10px;
+}
