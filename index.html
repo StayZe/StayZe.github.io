@@ -21,6 +21,32 @@
                     <li><a href="#cv">CV</a></li>
                     <li><a href="#contact">Me Contacter</a></li>
                 </ul>
+                <p class="heure" id="heure"></p>
+            
+                <script>
+                    function afficherHeure() {
+                        var maintenant = new Date();
+                        var heures = maintenant.getHours();
+                        var minutes = maintenant.getMinutes();
+                        var secondes = maintenant.getSeconds();
+            
+                        // Ajout du zéro initial si nécessaire
+                        heures = (heures < 10 ? "0" : "") + heures;
+                        minutes = (minutes < 10 ? "0" : "") + minutes;
+                        secondes = (secondes < 10 ? "0" : "") + secondes;
+            
+                        // Formatage de l'heure
+                        var heureAffichee = heures + ":" + minutes + ":" + secondes;
+            
+                        // Affichage de l'heure dans l'élément avec l'ID "heure"
+                        document.getElementById("heure").textContent = heureAffichee;
+            
+                        // Actualiser toutes les secondes
+                        setTimeout(afficherHeure, 1000);
+                    }
+                    // Appeler la fonction pour démarrer l'affichage de l'heure
+                    afficherHeure();
+                </script>
             </div>
             <div class="social-media">
                 <ul>
@@ -36,16 +62,26 @@
     </div>
     <div id="prestations">
         <ul>
-            <li><a target="_blank" href="#">Site Web 1 Page</a></li>
-            <li><a target="_blank" href="#">Site Web 2/3 Page</a></li>
+            <div class="prestation-site">
+                <li><a target="_blank" href="#">Site Web Vitrine 1 Page </a><br>
+                    <p>-</p>
+                    <a href="#">exemple</a></li>
+                </div>
+            <div class="prestation-site">
+                <li><a target="_blank" href="#">Site Web Vitrine 2/3 Page </a><br>
+                    <p>-</p>
+                    <a href="#">exemple</a></li>
+                </div>
             <li><a target="_blank" href="#">Devis Personnalisé</a></li>
         </ul>
     </div>
 
     <div id="cv">
         <ul>
-            <li>
-                <a target="_blank" href="/Moderne Professionnel C.V..pdf">télécharger</a>
+            <li class="cv">
+                <a target="_blank" href="/cv.pdf">Voir</a>
+                <p>-</p>
+                <a download="cv" target="_blank" href="/cv.pdf">Télécharger</a>
             </li>
         </ul>
     </div>
@@ -62,6 +98,7 @@
             </ul>
         </div>
     </div>
+
 </body>
 
 </html>
