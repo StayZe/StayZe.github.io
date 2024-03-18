@@ -10,6 +10,28 @@ body{
     padding: 0;
 }
 
+.center{
+    background-image: url(/1.png);
+    height: 100vh;
+    background-size: cover;
+}
+#prestations{
+    background-image: url(/2.png);
+    height: 100vh;
+    background-size: cover;
+}
+#cv{
+    background-image: url(/3.png);
+    height: 100vh;
+    background-size: cover;
+}
+
+#contact{
+    background-image: url(/4.png);
+    height: 100vh;
+    background-size: cover;
+}
+
 html {
     scroll-behavior: smooth; /* Ajoute une transition fluide lors du déplacement */
     transition-duration: 2s;
