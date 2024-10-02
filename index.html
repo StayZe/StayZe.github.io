@@ -19,28 +19,29 @@
                     <li><a href="#menu">Home</a></li>
                     <li><a href="#prestations">Mes Prestations</a></li>
                     <li><a href="#cv">CV</a></li>
-                    <li><a href="#contact">Me Contacter</a></li>
+                    <li><a href="#contact">Mes réseaux</a></li>
+                    <li><a href="#form-contact">Me Contacter</a></li>
                 </ul>
                 <p class="heure" id="heure"></p>
-            
+
                 <script>
                     function afficherHeure() {
                         var maintenant = new Date();
                         var heures = maintenant.getHours();
                         var minutes = maintenant.getMinutes();
                         var secondes = maintenant.getSeconds();
-            
+
                         // Ajout du zéro initial si nécessaire
                         heures = (heures < 10 ? "0" : "") + heures;
                         minutes = (minutes < 10 ? "0" : "") + minutes;
                         secondes = (secondes < 10 ? "0" : "") + secondes;
-            
+
                         // Formatage de l'heure
                         var heureAffichee = heures + ":" + minutes + ":" + secondes;
-            
+
                         // Affichage de l'heure dans l'élément avec l'ID "heure"
                         document.getElementById("heure").textContent = heureAffichee;
-            
+
                         // Actualiser toutes les secondes
                         setTimeout(afficherHeure, 1000);
                     }
@@ -65,13 +66,15 @@
             <div class="prestation-site">
                 <li><a target="_blank" href="#">Site Web Vitrine 1 Page </a><br>
                     <p>-</p>
-                    <a href="#">exemple</a></li>
-                </div>
+                    <a href="#">exemple</a>
+                </li>
+            </div>
             <div class="prestation-site">
                 <li><a target="_blank" href="#">Site Web Vitrine 2/3 Page </a><br>
                     <p>-</p>
-                    <a href="#">exemple</a></li>
-                </div>
+                    <a href="#">exemple</a>
+                </li>
+            </div>
             <li><a target="_blank" href="#">Devis Personnalisé</a></li>
         </ul>
     </div>
@@ -97,6 +100,15 @@
                 <li><a href="mailto:mandra.antoine@gmail.com"><img src="/mail.png" alt=""></a></li>
             </ul>
         </div>
+    </div>
+
+    <div id="form-contact">
+        <form action="https://formspree.io/f/mwpegdgb" method="POST">
+            <input type="email" name="email" placeholder="Votre e-mail">
+            <textarea name="message" placeholder="Sujet"></textarea>
+            <!-- your other form fields go here -->
+            <button type="submit">Send</button>
+        </form>
     </div>
 
 </body>
